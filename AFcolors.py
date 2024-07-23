@@ -14,6 +14,8 @@ def AFcolors(selection="all"):
     Colors Alphafold structures by pLDDT
     An improved version of the original to prevent the exact values of 90, 70, and 50 from not being recolored.
     Ranges were checked on AFDB to ensure that 90, 70, and 50 match their color scheme, despite the nonsensical model confidence legend on the AFDB website.
+    The colors now match exactly AFDB color scheme
+
 
     USAGE
     AFcolors sele
