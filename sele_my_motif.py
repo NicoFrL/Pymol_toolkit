@@ -1,10 +1,11 @@
-#Just drag and drop the scipt in Pymol, or load it through File > Run Script... or install it via plugging mannager
 from pymol import cmd
 import re
 
 def find_motif(motif):
     # Get the sequence of the currently loaded protein
-    seq = cmd.get_fastastr().split("\n")[1]
+    fasta_str = cmd.get_fastastr()
+    # Remove header and concatenate lines to get the full sequence
+    seq = ''.join(fasta_str.split('\n')[1:])
     
     # Find all occurrences of the motif
     matches = list(re.finditer(motif, seq))
